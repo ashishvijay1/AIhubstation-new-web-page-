@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIHub Station - Courses and More</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: right;
+            padding: 20px;
+            background-color: #2e324a;
+            color: white;
+        }
+
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .header-center button {
+            padding: 10px 20px;
+            background-color: #9a8c98;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: rgb(27, 24, 20);
+            font-size: 16px;
+        }
+
+        .header-center button:hover {
+            background-color: #d9cbc8;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-right img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .header-right h1 {
+            font-size: 20px;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #150707;
+            margin-bottom: 30px;
+        }
+
+        .notes-box {
+            background-color: #e0defc;
+            padding: 20px;
+            border-radius: 40px;
+            margin-bottom: 40px;
+            margin-right:20px;
+            margin-left:20px;
+            font-size: 18px;
+            line-height: 2.8;
+        }
+
+        /* Course Section */
+        .courses {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .course-box {
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .course-box h3 {
+            font-size: 24px;
+            color: #4a4e69;
+            margin-bottom: 10px;
+        }
+
+        .course-box p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .course-box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4a4e69;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        .course-box button:hover {
+            background-color: #6d6875;
+        }
+
+        /* Video Section */
+        .video-section {
+            max-width: 800px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #4a4e69;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-center">
+            <div style="position: absolute; left: 20px;">
+                <button onclick="window.location.href='join.html'">Join</button>
+            </div>
+        </div>
+        <div class="header-right">
+            <img src="/903d2f3e-20b3-4a8b-9f56-6aa1f32958ce.webp" alt="AIHub Logo">
+            <h1>AIHub Station</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <h2 style="font-family: 'Courier New', Courier, monospace; font-weight: bold; color: #4a4e69;">Empowering the Future with AI Education</h2>
+        <p style="font-style: italic; color: #333;"></p>
+            At AI HUB Station, we are committed to revolutionizing the way people learn and apply artificial intelligence.
+            Located in Kota, Rajasthan, we provide a comprehensive platform for students, professionals, and organizations
+            to master the skills necessary to thrive in an AI-driven world.
+        </p>
+
+        <!-- Notes Box -->
+        <div class="notes-box">
+            <p>Our mission is to bridge the gap between theoretical knowledge and practical application by offering hands-on training and
+                 industry-recognized certifications. We partner with global technology leaders such as Microsoft, AWS, Google, and NVIDIA to 
+                 ensure our learners have access to the best tools and platforms the AI industry has to offer</p>
+        </div>
+    </div>
+        <!-- Key Features Section -->
+        <div class="content">
+            <h2 style="text-align: left;">Key Features of Our Program</h2>
+            <ul class="key-features">
+                <li>Comprehensive Curriculum covering AI, ML, and Data Science</li>
+                <li>Hands-on Projects and Real-world Applications</li>
+                <li>Industry-recognized Certifications</li>
+                <li>Expert Instructors from Leading Tech Companies</li>
+                <li>Flexible Learning Options: Online and In-person</li>
+                <li>Access to Cutting-edge Tools and Platforms</li>
+                <li>Networking Opportunities with AI Professionals</li>
+            </ul>
+        </div>
+
+        <style>
+            .key-features {
+                list-style-type: disc;
+                padding-left: 40px;
+                text-align: left;
+                font-size: 18px;
+                color: #333;
+            }
+
+            .key-features li {
+                margin-bottom: 10px;
+            }
+        </style>
+    <!-- Courses Section -->
+    <div class="content">
+        <h2>Our Courses</h2>
+        <div class="courses">
+            <!-- Course 1 -->
+            <div class="course-box">
+                <img src="/903d2f3e-20b3-4a8b-9f56-6aa1f32958ce.webp" alt="AI Fundamentals" style="width:100%; border-radius: 8px;">
+                <h3>AI Inovator</h3>
+                <p>Learn 100+ AI tools to enhance your productivity.Grow with techonology and Boost your creativity.</p>
+                <button onclick="window.location.href='AI-Inovator.html'">Learn More</button>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="course-box">
+                <img src="/903d2f3e-20b3-4a8b-9f56-6aa1f32958ce.webp" alt="Advanced Machine Learning" style="width:100%; border-radius: 8px;">
+                <h3>Weekend Genius</h3>
+                <p>Our mentorship program for 11th and 12th grade students focuses on IIT-JEE/NEET 
+                    preparation.</p>
+                <button onclick="window.location.href='Weekend-Genius.html'">Learn More</button>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="course-box">
+                <img src="/903d2f3e-20b3-4a8b-9f56-6aa1f32958ce.webp" alt="AI in Business" style="width:100%; border-radius: 8px;">
+                <h3>Maths master</h3>
+                <p>mathematics from basic to advanced levels, tailored for 9th and 10th-grade students and suitable for everyone.</p>
+                <button onclick="window.location.href='Maths-Master.html'">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="video-section" style="max-width: 600px; margin: 50px auto; text-align: center;">
+        <h2>Watch Our Intro Video</h2>
+        <video controls style="width: 100%; height: auto; max-height: 300px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <source src="/AI-Hub-Video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+        </video>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 AIHub Station. All rights reserved.</p>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms and Conditions</a>
+        <a href="contact.html">Contact Us</a>
+    </footer>
+
+</body>
+
+</html>

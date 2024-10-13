@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Innovator Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #32253e;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #30283d;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .buy-button {
+            display: block;
+            width: 200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #41345d;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the AI Innovator Course</h1>
+    </header>
+    <main>
+        <h2>Course Overview</h2>
+        <p>This course is designed to provide you with the knowledge and skills needed to become an AI Innovator. You will learn about various AI technologies, tools, and methodologies.</p>
+        
+        <h2>Key Features</h2>
+        <ul>
+            <li>Learn 30+ AI tools to boost your career and productivity</li>
+            <li>Hands-on projects and real-world applications</li>
+            <li>Expert instructors with industry experience</li>
+            <li>Flexible learning schedule</li>
+            <li>Certification upon completion</li>
+        </ul>
+        
+        <h2>Course Modules</h2>
+        <ul>
+            <li>Introduction to AI</li>
+            <li>Machine Learning Basics</li>
+            <li>Deep Learning Techniques</li>
+            <li>AI in Industry</li>
+            <li>Project Work</li>
+        </ul>
+
+        <a href="https://www.razorpay.com" class="buy-button">Buy This Course</a>
+     
+    </main>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        document.querySelector('.buy-button').onclick = function(e) {
+            e.preventDefault();
+            var options = {
+                "key": "YOUR_RAZORPAY_KEY", // Enter the Key ID generated from the Dashboard
+                "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise or ₹500.
+                "currency": "INR",
+                "name": "AI Innovator Course",
+                "description": "Purchase AI Innovator Course",
+                "image": "https://example.com/your_logo",
+                "handler": function (response){
+                    alert("Payment successful. Payment ID: " + response.razorpay_payment_id);
+                },
+                "prefill": {
+                    "name": "Your Name",
+                    "email": "your.email@example.com",
+                    "contact": "9999999999"
+                },
+                "theme": {
+                    "color": "#32253e"
+                }
+            };
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 AI Innovator Course. All rights reserved.</p>
+    </footer>
+</body>
+</html>

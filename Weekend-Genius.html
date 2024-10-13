@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Genius Mentorship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3e3a5e;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            
+            background-size: contain;
+            opacity: 0.3;
+            background-size: contain;
+            text-align: center;
+            color: #ffffff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #ada0b1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+        .buy-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #77aaff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Weekend Genius Mentorship</h1>
+            </div>
+         
+        </div>
+    </header>
+
+    <section class="showcase">
+        <div class="container">
+            <h1>Excel in Your Studies</h1>
+            <p>Providing mentorship for 11th, 12th, JEE Mains, and NEET  Physics and mathematics students</p>
+        </div>
+    </section>
+
+    <section class="features container">
+        <div class="feature">
+            <h3>Personalized Mentorship</h3>
+            <p>Get one-on-one guidance from experienced mentors.</p>
+        </div>
+        <div class="feature">
+            <h3>Weekly Sessions</h3>
+            <p>Regular sessions to keep you on track and motivated.</p>
+        </div>
+        <div class="feature">
+            <h3>Comprehensive Study Material</h3>
+            <p>Access to extensive study resources and practice tests.</p>
+        </div>
+    </section>
+
+    <a href="#" class="buy-button" id="rzp-button1">Buy This Course</a>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            "key": "YOUR_RAZORPAY_KEY", // Enter the Key ID generated from the Dashboard
+            "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Weekend Genius Mentorship",
+            "description": "Course Purchase",
+            "image": "https://example.com/your_logo",
+            "handler": function (response){
+                alert(response.razorpay_payment_id);
+            },
+            "prefill": {
+                "name": "Your Name",
+                "email": "your.email@example.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "address": "Your Address"
+            },
+            "theme": {
+                "color": "#77aaff"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>
