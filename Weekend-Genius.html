@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #3e3a5e;
+            background-color: #706a9c;
             margin: 0;
             padding: 0;
         }
@@ -15,9 +15,10 @@
             width: 80%;
             margin: auto;
             overflow: hidden;
+            text-align: center;
         }
         header {
-            background: #333;
+            background: #534d4d;
             color: #fff;
             padding-top: 30px;
             min-height: 70px;
@@ -38,10 +39,10 @@
             display: inline;
             padding: 0 20px 0 20px;
         }
-        header #branding {
+        header .branding {
             float: left;
         }
-        header #branding h1 {
+        header .branding h1 {
             margin: 0;
         }
         header nav {
@@ -50,7 +51,6 @@
         }
         .showcase {
             min-height: 400px;
-            
             background-size: contain;
             opacity: 0.3;
             background-size: contain;
@@ -58,40 +58,71 @@
             color: #ffffff;
         }
         .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
+            margin-top: 50px;
+            font-size: 40px;
             margin-bottom: 10px;
         }
         .showcase p {
-            font-size: 20px;
+            font-size: 25px;
         }
         .features {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
-            margin: 20px 0;
+            margin: 0px 0px;
+            align-items: center;
         }
         .feature {
-            background: #ada0b1;
+            align-items: left;
+            background: #999a54;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
-            width: 30%;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width:30%;
+            box-shadow: 0 0 10px rgba(26, 17, 17, 0.1);
+            margin-bottom: 20px;
         }
         .feature h3 {
-            margin-top: 0;
+            margin-top: 40px;
         }
         .buy-button {
             display: block;
             width: 200px;
-            margin: 20px auto;
-            padding: 10px;
+            margin: 30px auto;
+            padding: 5px;
             background: #77aaff;
             color: #fff;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            header nav {
+                float: none;
+                text-align: center;
+                margin-top: 10px;
+            }
+            header .branding, header nav {
+                float: none;
+                text-align: center;
+            }
+            header li {
+                float: none;
+                display: block;
+                padding: 10px 0;
+            }
+            .showcase h1 {
+                font-size: 35px;
+                margin-top: 50px;
+            }
+            .showcase p {
+                font-size: 18px;
+            }
+            .feature {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -101,30 +132,45 @@
             <div id="branding">
                 <h1>Weekend Genius Mentorship</h1>
             </div>
-         
         </div>
     </header>
 
     <section class="showcase">
         <div class="container">
             <h1>Excel in Your Studies</h1>
-            <p>Providing mentorship for 11th, 12th, JEE Mains, and NEET  Physics and mathematics students</p>
+            <p>Providing mentorship for 11th, 12th, JEE Mains, and NEET Physics and mathematics students</p>
         </div>
     </section>
 
     <section class="features container">
         <div class="feature">
-            <h3>Personalized Mentorship</h3>
-            <p>Get one-on-one guidance from experienced mentors.</p>
+            <h3>Expert Mentors</h3>
+            <p>Learn from top-notch mentors with years of experience in their fields.</p>
         </div>
         <div class="feature">
-            <h3>Weekly Sessions</h3>
-            <p>Regular sessions to keep you on track and motivated.</p>
+            <h3>Interactive Learning</h3>
+            <p>Engage in interactive sessions that make learning fun and effective.</p>
         </div>
-        
+        <div class="feature">
+            <h3>Flexible Timings</h3>
+            <p>Choose session timings that fit your schedule and learn at your own pace.</p>
+        </div>
+        <div class="feature">
+            <h3>Community Support</h3>
+            <p>Join a community of learners and get support from peers and mentors.</p>
+        </div>
+        <div class="feature">
+            <h3>Exclusive Resources</h3>
+            <p>Get access to premium study materials and practice tests.</p>
+        </div>
+        <div class="feature">
+            <h3>Performance Tracking</h3>
+            <p>Track your progress with regular assessments and feedback.</p>
+        </div>
+      
     </section>
 
-    <a href="#" class="buy-button" id="rzp-button1">Buy This Course</a>
+    <a href="#" class="buy-button" id="rzp-button1" style="float: left; margin-left: 35%;">Buy This Course</a>
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
